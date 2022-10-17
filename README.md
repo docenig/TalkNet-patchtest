@@ -24,3 +24,6 @@ and extract it to a folder.
 Open a terminal, and navigate to the directory where you saved it.
 * Run ```docker build -t talknet-offline .``` to build the image. Add ```sudo``` if you're not using rootless Docker.
 * Run ```docker run -it --gpus all -p 8050:8050 talknet-offline``` to start TalkNet on http://127.0.0.1:8050/.
+
+## Fork notes
+* This fork was made mostly to patch resources.txt when issues with package versions arise such as numpy falling behind, might pull in additions from other forks such as different voice sets as time goes on and my need for dumber and dumber content ideas arise.
