@@ -1,7 +1,5 @@
-# Controllable TalkNet 
-Controllable TalkNet is a web application that lets you synthesize speech, 
-which mimics the pitch and pacing of an existing audio clip. It's based on [NVIDIA's implementation](https://github.com/NVIDIA/NeMo)
-of TalkNet 2, with some changes to support singing synthesis and higher audio quality.
+# TalkNet patching test fork
+This fork was made mostly to test patching weird issues I get when running docker on my machine (Ryzen 5900X, 64GB DDR4-3200, 5700XT for main GPU and a 1050ti for audio CUDA), might pull in additions from other forks such as different voice sets as time goes on and my need for dumber and dumber content ideas arise.
 
 ## Requirements
 * A Google account to run Colab, or...
@@ -13,10 +11,7 @@ of TalkNet 2, with some changes to support singing synthesis and higher audio qu
 * [Go to the Colab notebook](https://colab.research.google.com/drive/1aj6Jk8cpRw7SsN3JSYCv57CrR6s0gYPB) and follow the instructions.
 
 ### TalkNet Offline (Windows)
-* [Download the setup script](https://github.com/SortAnon/ControllableTalkNet/releases/latest/download/TalkNetOffline.zip)
-and extract it to a folder.
-* Run setup.bat. The initial setup will take about 20 minutes.
-* When it's done, run talknet.bat to start TalkNet on http://127.0.0.1:8050/. To download updates, run update.bat.
+Fugouddaheah
 
 ### Docker (Linux)
 * Install Docker and NVIDIA Container Toolkit.
@@ -24,6 +19,3 @@ and extract it to a folder.
 Open a terminal, and navigate to the directory where you saved it.
 * Run ```docker build -t talknet-offline .``` to build the image. Add ```sudo``` if you're not using rootless Docker.
 * Run ```docker run -it --gpus all -p 8050:8050 talknet-offline``` to start TalkNet on http://127.0.0.1:8050/.
-
-## Fork notes
-* This fork was made mostly to patch resources.txt when issues with package versions arise such as numpy falling behind, might pull in additions from other forks such as different voice sets as time goes on and my need for dumber and dumber content ideas arise.
